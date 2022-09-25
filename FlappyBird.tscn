@@ -22,10 +22,10 @@ animations = [ {
 [node name="FlappyBird" type="Node2D"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 127.842, 236.5 )
-scale = Vector2( 0.147569, 0.147569 )
+position = Vector2( 113.842, 157.5 )
+scale = Vector2( 0.15, 0.15 )
 frames = SubResource( 1 )
-frame = 5
+frame = 7
 playing = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
