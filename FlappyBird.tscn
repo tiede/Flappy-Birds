@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://grafik/frame-2.png" type="Texture" id=1]
 [ext_resource path="res://grafik/frame-4.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://grafik/frame-8.png" type="Texture" id=8]
 [ext_resource path="res://grafik/Background.png" type="Texture" id=9]
 [ext_resource path="res://ParallaxBackground.gd" type="Script" id=10]
+[ext_resource path="res://Node2D - Flere Vaegge.tscn" type="PackedScene" id=11]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -22,10 +23,9 @@ animations = [ {
 [node name="FlappyBird" type="Node2D"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 113.842, 157.5 )
-scale = Vector2( 0.15, 0.15 )
+position = Vector2( 113.842, 133.5 )
+scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 1 )
-frame = 7
 playing = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -38,3 +38,6 @@ motion_mirroring = Vector2( 728, 0 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 9 )
 centered = false
+
+[node name="Node2D - Flere Vaegge" parent="." instance=ExtResource( 11 )]
+position = Vector2( 500, 0 )
