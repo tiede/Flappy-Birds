@@ -5,7 +5,7 @@
 [ext_resource path="res://Node2D - Vaeg.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 13, 80 )
+extents = Vector2( 13, 171.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 10, 44 )
@@ -19,9 +19,12 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Area2D - Top"]
+position = Vector2( 0, -92.5 )
+scale = Vector2( 1, 2.15625 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D - Top"]
+position = Vector2( 0, -92.5 )
 shape = SubResource( 1 )
 
 [node name="Area2D - Bund" type="Area2D" parent="."]
@@ -31,9 +34,12 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Area2D - Bund"]
+position = Vector2( 0, 92 )
+scale = Vector2( 1, 2.15 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D - Bund"]
+position = Vector2( 0, 90.5 )
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
