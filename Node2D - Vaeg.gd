@@ -8,10 +8,11 @@ func _physics_process(delta):
 
 func _on_Area2D__Top_body_entered(body):
 	print("top ramt")
+	get_tree().change_scene("res://Node2D - Game over.tscn")
 	
 func _on_Area2D__Bund_body_entered(body):
 	print("bund ramt")
-
+	get_tree().change_scene("res://Node2D - Game over.tscn")
 
 func _on_Area2D_body_entered(body):
 	print("wuhu - point")
