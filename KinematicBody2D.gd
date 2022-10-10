@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var bevaegelse = Vector2(0,0)
 var TYNGDEKRAFT = 3
-var HOPSTYRKE = -150
+var HOPSTYRKE = -120
 
 var point = 0
 var highscore = 0

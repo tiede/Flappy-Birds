@@ -15,7 +15,6 @@ func _on_Area2D__Top_body_entered(body):
 	
 func _on_Area2D__Bund_body_entered(body):
 	print("bund ramt")
-	print (cheatMode)
 	if !cheatMode:
 		get_tree().change_scene("res://Node2D - Game over.tscn")
 
