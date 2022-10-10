@@ -1,5 +1,7 @@
 extends Node2D
 
+var cheatMode = false
+
 func _physics_process(delta):
 	position.x += -100 * delta
 	if global_position.x <= -50:
@@ -8,11 +10,15 @@ func _physics_process(delta):
 
 func _on_Area2D__Top_body_entered(body):
 	print("top ramt")
-	get_tree().change_scene("res://Node2D - Game over.tscn")
+	if !cheatMode:
+		get_tree().change_scene("res://Node2D - Game over.tscn")
 	
 func _on_Area2D__Bund_body_entered(body):
 	print("bund ramt")
-	get_tree().change_scene("res://Node2D - Game over.tscn")
+	print (cheatMode)
+	if !cheatMode:
+		get_tree().change_scene("res://Node2D - Game over.tscn")
 
 func _on_Area2D_body_entered(body):
 	print("wuhu - point")
+	body.tilfoej_point()
