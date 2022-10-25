@@ -11,13 +11,16 @@ func _physics_process(delta):
 func _on_Area2D__Top_body_entered(body):
 	print("top ramt")
 	if !cheatMode:
-		get_tree().change_scene("res://Node2D - Game over.tscn")
+		game_over()
 	
 func _on_Area2D__Bund_body_entered(body):
 	print("bund ramt")
 	if !cheatMode:
-		get_tree().change_scene("res://Node2D - Game over.tscn")
+		game_over()
 
 func _on_Area2D_body_entered(body):
 	print("wuhu - point")
 	body.tilfoej_point()
+
+func game_over():
+	get_tree().change_scene("res://Node2D - Game over.tscn")

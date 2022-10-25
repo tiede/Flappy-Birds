@@ -11,5 +11,10 @@ func _on_Timer_timeout():
 	var vaeg = VAEG.instance()
 	add_child(vaeg)
 	var y = randi() % 170 + 1
-	print(y)
 	vaeg.position.y = y
+
+func start():
+	timer.start()
+	
+func stop():
+	timer.stop()
