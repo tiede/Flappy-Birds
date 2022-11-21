@@ -18,7 +18,7 @@ onready var HUD = get_node("/root/FlappyBird/HUD")
 func _physics_process(delta):
 	if Input.is_action_just_pressed("Start") and !start_spillet:
 		start_spil()
-	elif start_spillet == true:
+	elif start_spillet:
 		if Input.is_action_just_pressed("Flyv"):
 			bevaegelse.y += HOPSTYRKE
 			
@@ -43,3 +43,8 @@ func start_spil():
 	LOGO.set_visible(false)
 	START.set_visible(false)
 	VAEGGE.start()
+
+func _on_Panel_gui_input(event):
+	if event is InputEventMouseButton:
+		if event.is_pressed():
+			start_spil()

@@ -34,6 +34,11 @@ extents = Vector2( 35, 30 )
 
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.847059, 0.0784314, 0.0784314, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
@@ -59,14 +64,14 @@ text = "Flappy bird
 - coding pirates"
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-position = Vector2( 93, 230 )
+position = Vector2( 93, 255 )
 script = ExtResource( 12 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
 position = Vector2( 45, -2 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 1 )
-frame = 5
+frame = 7
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
@@ -96,9 +101,9 @@ margin_bottom = 94.0
 
 [node name="Startknap" type="Control" parent="."]
 margin_left = 111.0
-margin_top = 279.0
+margin_top = 327.0
 margin_right = 151.0
-margin_bottom = 319.0
+margin_bottom = 367.0
 
 [node name="Panel" type="Panel" parent="Startknap"]
 margin_left = -6.0
@@ -114,3 +119,5 @@ margin_right = 155.0
 margin_bottom = 58.0
 custom_fonts/font = SubResource( 4 )
 text = "Start"
+
+[connection signal="gui_input" from="Startknap/Panel" to="KinematicBody2D" method="_on_Panel_gui_input"]
