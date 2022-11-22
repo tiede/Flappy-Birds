@@ -34,6 +34,9 @@ func _physics_process(delta):
 func tilfoej_point():
 	point += 1
 	HUD.set_antal_point(point)
+	if (point > highscore):
+		highscore = point
+		HUD.set_highscore(point)
 
 func game_over():
 	get_tree().change_scene("res://Node2D - Game over.tscn")
@@ -43,6 +46,7 @@ func start_spil():
 	LOGO.set_visible(false)
 	START.set_visible(false)
 	VAEGGE.start()
+	HUD.set_highscore(highscore)
 
 func _on_Panel_gui_input(event):
 	if event is InputEventMouseButton:
