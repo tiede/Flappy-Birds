@@ -3,6 +3,7 @@ extends KinematicBody2D
 onready var LOGO = get_node("/root/FlappyBird/FlappyBirdLogo")
 onready var START = get_node("/root/FlappyBird/Startknap")
 onready var VAEGGE = get_node("/root/FlappyBird/Node2D - Flere Vaegge")
+onready var HUD = get_node("/root/FlappyBird/HUD")
 
 var bevaegelse = Vector2(0,0)
 var TYNGDEKRAFT = 3
@@ -13,8 +14,6 @@ var highscore = 0
 
 var start_spillet = false
 var newHighScore = false
-
-onready var HUD = get_node("/root/FlappyBird/HUD")
 
 func _ready():
 	var file = File.new()

@@ -26,4 +26,3 @@ func _on_Area2D_body_entered(body):
 func game_over(body):
 	print(body)
 	body.game_over()
-	#get_tree().change_scene("res://Node2D - Game over.tscn")
