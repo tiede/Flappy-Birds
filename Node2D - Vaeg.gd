@@ -11,17 +11,19 @@ func _physics_process(delta):
 func _on_Area2D__Top_body_entered(body):
 	print("top ramt")
 	if !cheatMode:
-		game_over()
+		game_over(body)
 	
 func _on_Area2D__Bund_body_entered(body):
 	print("bund ramt")
 	if !cheatMode:
-		game_over()
+		game_over(body)
 
 func _on_Area2D_body_entered(body):
 	print("wuhu - point")
 	body.tilfoej_point()
 	$"PointsStreamPlayer".play()
 
-func game_over():
-	get_tree().change_scene("res://Node2D - Game over.tscn")
+func game_over(body):
+	print(body)
+	body.game_over()
+	#get_tree().change_scene("res://Node2D - Game over.tscn")
