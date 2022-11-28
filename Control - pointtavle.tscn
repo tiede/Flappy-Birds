@@ -51,6 +51,7 @@ custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "####"
+align = 2
 
 [node name="Label" type="Label" parent="."]
 margin_left = 4.0
